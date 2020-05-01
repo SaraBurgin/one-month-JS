@@ -19,21 +19,47 @@
         color: #333;
       }
     </style>
+  </head>
 
+  <body>
+    <img src="Oprah.jpg" alt="image-of-Oprah" width="200px" />
     <script>
       /* This is an event */
       /*alert('I´m annoying');*/
 
-      var firstname = 'Sara';
-      var lastname = 'Gonzalez';
-      var fullname = firstname + ' ' + lastname;
-      var a = 1;
+      /*prompt() is a function that creates an alert message. The information that is input by the user in this alert message is saved in the username variable and we document.write below it prints the value. */
 
-      document.write('<h1>' + fullname + '<h1>');
-      document.write('<h1>' + fullname + '<h1>');
-      document.write('<h1>' + fullname + '<h1>');
+      var username = prompt('Hello, Who are you?');
+      var car = [' BMW', ' Saab', ' Maserati'];
+      var carImage = [
+        '<img src="BMW.jpg" alt="bmw-car" width="450px"/>',
+        '<img src="Saab.jpg" alt="saab-car" width="450px"/>',
+        '<img src="Maserati.jpeg" alt="maserati-car" width="450px"/>',
+      ];
+
+      var randomCar = Math.floor(Math.random() * car.length);
+
+      if (username === 'Sara') {
+        document.write(
+          '<h1>Hello ' +
+            username +
+            ', you won a ' +
+            car[randomCar] +
+            '!!<h1>' +
+            carImage[randomCar],
+        );
+      } else if (username === 'Chris') {
+        document.write(
+          '<h1>Hello ' +
+            username +
+            ', you won a ' +
+            car[randomCar] +
+            carImage +
+            '!!<h1>',
+        );
+      } else {
+        document.write('<h1>Hello ' + username + '!<h1>');
+      }
     </script>
-  </head>
-
-  <body></body>
+  </body>
 </html>
